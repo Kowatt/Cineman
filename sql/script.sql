@@ -39,8 +39,16 @@ CREATE TABLE movie.movie (
     rating double precision
 );
 
+CREATE TABLE movie.account (
+    iduser SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    access INTEGER NOT NULL
+);
+
 
 ALTER TABLE movie.movie OWNER TO postgres;
+ALTER TABLE movie.account OWNER TO postgres;
 
 --
 -- TOC entry 3426 (class 0 OID 18419)
@@ -252,7 +260,7 @@ INSERT INTO movie.movie VALUES ('tt0113442', 'It Takes Two', '1995-11-17', 101, 
 INSERT INTO movie.movie VALUES ('tt4877122', 'The Emoji Movie', '2017-07-23', 86, 50000000, 216909830, 'https://image.tmdb.org/t/p/original/f5pF4OYzh4wb1dYL2ARQNdqUsEZ.jpg', 'Gene, a multi-expressional emoji, sets out on a journey to become a normal emoji.', 0.33);
 INSERT INTO movie.movie VALUES ('tt6911608', 'Mamma Mia! Here We Go Again', '2018-07-09', 113, 75000000, 395044706, 'https://image.tmdb.org/t/p/original/vzI4gNJDUwWgmNDSBWxYoeGkIEY.jpg', 'Five years after meeting her three fathers, Sophie Sheridan prepares to open her mother’s hotel. In 1979, young Donna Sheridan meets the men who each could be Sophie’s biological father.', 0.66);
 INSERT INTO movie.movie VALUES ('tt0372784', 'Batman Begins', '2005-06-10', 140, 150000000, 374218673, 'https://image.tmdb.org/t/p/original/1P3ZyEq02wcTMd3iE4ebtLvncvH.jpg', 'Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.', 0.82);
-
+INSERT INTO movie.movie VALUES ('tt2458948', 'シン・エヴァンゲリオン劇場版:ll', '2021-03-08', 154, 0, 92246218, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eadcE25WY7XlnlhPnE9HuDWeLLj.jpg', 'Misato et son groupe anti-NERV, Wille, arrivent à Paris rougie par la core-ization. L''équipage du vaisseau Wunder atterrit sur une tour de confinement. Ils ont 720 secondes pour remettre la ville sur pied. Une horde de NERV Evas apparaît et l''Unité Eva 8 améliorée de Mari doit l''intercepter. Entretemps, Shinji, Asuka et Rei flânent au Japon.', 1.00);
 
 --
 -- TOC entry 3287 (class 2606 OID 18426)
